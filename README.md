@@ -13,8 +13,11 @@ A 3-years BUT (Bachelor universitaire de technologie) degree in Data Science (SD
 
 **2020-2023** : Ecole d’Enseignement Général, Technique et Professionnel « Laura Vicuna », Cotonou, Benin.
 Baccalauréat diploma, with distinction High honour, Major in maths, physics and biology 
-Project Related to study:
-March-June 2024: 1st year statistics & computing project:
+
+
+# Project Related to study:
+
+*March-June 2024*: 1st year statistics & computing project:
 I worked with 5 other student colleagues, and we created a tool that allows us to automatically and quickly generate dashboards for the J.M Charcot Public Mental Health Establishment. We designed the interface to make it easy to use for people who don't know too much about computer science and statistics. We have calculated key performance indicators to evaluate the activity to make strategic and organizational decisions.
 We created an infographic to explain the project. Our mark was based on a written report of our work, as well as an oral presentation in front of several teachers and a professional from the establishment.
 
