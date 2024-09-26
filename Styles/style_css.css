@@ -51,6 +51,10 @@ header li {
     padding-bottom: 10px;
 }
 
+.section h3 {
+    margin-top: 20px;
+}
+
 .section ul {
     list-style-type: none;
     padding: 0;
@@ -60,16 +64,59 @@ header li {
     margin-bottom: 10px;
 }
 
-.section ul li a {
-    color: #333;
-    text-decoration: none;
+.section ul li ul {
+    list-style-type: disc;
+    margin-left: 20px;
 }
 
-.section ul li a:hover {
-    text-decoration: underline;
+.image-slider {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
 }
 
-.section ul li img {
-    vertical-align: middle;
-    margin-right: 5px;
+.slides .slide {
+    display: none;
+}
+
+.slides .slide img {
+    width: 100%;
+}
+
+.slides .slide p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.slides .slide:first-child {
+    display: block;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.video-container {
+    text-align: center;
+    margin-top: 20px;
 }
