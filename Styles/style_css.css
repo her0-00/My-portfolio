@@ -1,8 +1,10 @@
+/* Styles de base */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
 
 .container {
@@ -11,8 +13,9 @@ body {
     overflow: hidden;
 }
 
+/* Styles pour l'en-tête */
 header {
-    background: #333;
+    background: linear-gradient(90deg, #333, #555);
     color: #fff;
     padding-top: 30px;
     min-height: 70px;
@@ -36,10 +39,13 @@ header li {
     padding: 0 20px 0 20px;
 }
 
+/* Styles pour le contenu principal */
 .main-content {
     padding: 20px;
     background: #fff;
     margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 .section {
@@ -49,10 +55,12 @@ header li {
 .section h2 {
     border-bottom: 2px solid #333;
     padding-bottom: 10px;
+    color: #444;
 }
 
 .section h3 {
     margin-top: 20px;
+    color: #555;
 }
 
 .section ul {
@@ -62,6 +70,7 @@ header li {
 
 .section ul li {
     margin-bottom: 10px;
+    color: #666;
 }
 
 .section ul li ul {
@@ -69,6 +78,12 @@ header li {
     margin-left: 20px;
 }
 
+/* Styles pour les textes en gras */
+.section strong {
+    color: #007BFF; /* Couleur bleue pour les textes en gras */
+}
+
+/* Styles pour le slider d'images */
 .image-slider {
     position: relative;
     max-width: 100%;
@@ -81,11 +96,13 @@ header li {
 
 .slides .slide img {
     width: 100%;
+    border-radius: 8px;
 }
 
 .slides .slide p {
     text-align: center;
     margin-top: 10px;
+    color: #777;
 }
 
 .slides .slide:first-child {
@@ -116,7 +133,13 @@ header li {
     background-color: rgba(0,0,0,0.8);
 }
 
+/* Styles pour le conteneur vidéo */
 .video-container {
     text-align: center;
     margin-top: 20px;
+}
+
+.video-container video {
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
