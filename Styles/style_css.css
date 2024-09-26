@@ -50,3 +50,21 @@ header li {
     border-bottom: 2px solid #333;
     padding-bottom: 10px;
 }
+
+.section h3 {
+    margin-top: 20px;
+}
+
+.section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+}
+
+.section ul li ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
