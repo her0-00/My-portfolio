@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Projets</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="main-content">
+            <section class="section">
+                <h2>Projets</h2>
+                <ul>
+                    <li><a href="project1.html">Création d'un outil décisionnel: Dashboard de suivi d'activité automatisé</a></li>
+                    <li><a href="project2.html">Simulation du problème de MONTY HALL avec PYTHON</a></li>
+                    <li><a href="project3.html">Analyse statistique complète avec R : cas des thématiques des JT</a></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
