@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard BI EPSM – Yenam Dossou | Power BI VBA DAX ETL Automatisation</title>
+    <meta name="description" content="Projet de Yenam Dossou : création d'un tableau de bord décisionnel automatisé pour l'EPSM J.M Charcot. 95% de temps gagné, +10 000 actes traités. Stack Power BI, VBA, DAX, Power Query.">
+    <meta name="keywords" content="Yenam Dossou, dashboard Power BI, tableau de bord hospitalier, EPSM, VBA, DAX, ETL, automatisation, BUT Science des Données, IUT Vannes">
+    <meta name="author" content="Yenam Dossou">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://her0-00.github.io/My-portfolio/Sites/projet1.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://her0-00.github.io/My-portfolio/Sites/projet1.html">
+    <meta property="og:title" content="Dashboard BI EPSM – Yenam Dossou">
+    <meta property="og:description" content="Tableau de bord décisionnel automatisé pour l'EPSM. Power BI, VBA, DAX. 95% de temps gagné.">
+    <meta property="og:image" content="https://her0-00.github.io/My-portfolio/Images/projet1_img.png">
+    <link rel="stylesheet" href="../Styles/style_css.css">
+    <link rel="icon" type="image/png" href="../Images/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="../Scripts/scripts.js"></script>
+    
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">YD</span>
+                <span class="logo-subtitle">Data Analyst</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Accueil</a></li>
+                <li><a href="about.html" class="nav-link">À propos</a></li>
+                <li><a href="projet.html" class="nav-link active">Projets</a></li>
+                <li><a href="competences.html" class="nav-link">Compétences</a></li>
+                <li><a href="../CV/CV_Yenam_Dossou_v.pdf" class="nav-link cv-link" download><i class="fas fa-download"></i> CV</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="hero-section-p1">
+        <div class="hero-content-p1">
+            <h1><i class="fas fa-chart-dashboard"></i> Dashboard BI Automatisé<br><span class="project-subtitle">Suivi d'Activité Hospitalière</span></h1>
+        </div>
+    </div>
+    <div class="container">
+        <!-- Icône flottante pour la table des matières -->
+        <div class="toc-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <!-- Table des matières flottante -->
+        <div class="toc">
+            <a href="#Projetabout">Description du projet</a>
+            <a href="#Data">Structure des données</a>
+            <a href="#Datacleanning">Nettoyage des données</a>
+            <a href="#Dataanalysis">Analyse des données</a>
+        </div>
+
+        <section id="Projetabout" class="rounded-block">
+            <h2>Description du projet</h2>
+            <p>La disposition d'informations pertinentes pour le management des activités, quel que soit le domaine, est cruciale. Avec la quantité de données pouvant être collectées aujourd'hui, il semble inévitable et nécessaire d'automatiser les processus de toute la chaîne de production des données jusqu'à leur utilisation sous forme d'indicateurs.</p>
+            <p>C'est dans cette optique qu'un EPSM m'a confié, à moi et à d'autres camarades, la mission de créer un tableau de bord qui se mettrait à jour automatiquement afin de suivre l’activité clinique et administrative, d’analyser les tendances et d’identifier les besoins en ressources.</p>
+            <p>On a donc joué le rôle de Data Analyst et nous avons répondu aux principales questions comme :</p>
+            <div class="project-metrics">
+                <div class="metric">
+                    <span class="metric-number">+10,000</span>
+                    <span class="metric-label">Actes traités</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-number">95%</span>
+                    <span class="metric-label">Temps gagné</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-number">6</span>
+                    <span class="metric-label">KPI automatisés</span>
+                </div>
+            </div>
+            <div class="challenge-box">
+                <h3><i class="fas fa-exclamation-triangle"></i> Défi principal</h3>
+                <p>Transformer un processus manuel de 8h/semaine en solution automatisée temps réel pour +10,000 actes médicaux</p>
+            </div>
+            <ol>
+                <li> Quelle est la part de patient par pôle ?</li>
+                <li>Quel pôle est le plus sollicité, à quelle période ?</li>
+                <li>Quelle est la provenance des patients ?</li>
+                <li>Comment évolue le nombre de patients dans le temps ?</li>
+                <li>Quelles sont les catégories de professionnels de santé les plus sollicitées ?</li>
+                <li>Quels sont les diagnostics les plus fréquents ?</li>
+            </ol>
+        </section>
+        <section id="Data" class="rounded-block">
+            <h2>Structure des données</h2>
+            <p>Les données utilisées pour ce projet sont sous forme de deux fichiers textes, un comportant les informations des actes ambulatoires (+10000 lignes, 23 variables) et l'autre concernant les séquences ambulatoires (+1000 lignes, 42 variables). Les données ont été anonymisées selon les règles en vigueur par la CNIL et randomisées pour des raisons évidentes. Avec mes collègues, nous avons créé à l'aide du langage VBA et du langage M un script permettant de charger automatiquement ces données dans une base de données sous forme de fichier Excel afin de rendre l'analyse des données plus facile et performante.</p>
+        </section>
+        <section id="Datacleanning" class="rounded-block">
+            <h2>Nettoyage des données</h2>
+            <p>Afin de réaliser ce projet, nous avons pris du temps à comprendre chaque variable des deux fichiers textes grâce à une documentation qui nous a été fournie.</p>
+            <p>Ensuite, nous avons jugé bon de réaliser un dictionnaire des données pour comprendre ce que représente chaque donnée, afin d'éviter les ambiguïtés et les malentendus. Chaque donnée a été associée à sa signification afin d’avoir des données claires et compréhensibles.</p>
+            <p>Cette étape est importante dans le processus d'analyse des données, assurant la qualité des informations en sortie.</p>
+            <p>S'en est suivi le nettoyage des données proprement dit qui a consisté à :</p>
+            <ul>
+                <li> Suppression des colonnes sans informations pertinentes, des lignes vides</li>
+                <li> Suppression des doublons</li>
+                <li> Correction des valeurs aberrantes, des valeurs manquantes</li>
+                <li> Typage correct des variables</li>
+            </ul>
+        </section>
+        <section id="Dataanalysis" class="rounded-block">
+            <h2>Architecture technique & Innovation</h2>
+            
+            <div class="tech-stack">
+                <h3>Stack technique</h3>
+                <div class="tech-badges">
+                    <span class="tech-badge">VBA</span>
+                    <span class="tech-badge">Power Pivot</span>
+                    <span class="tech-badge">DAX</span>
+                    <span class="tech-badge">Excel</span>
+                    <span class="tech-badge">Power Query</span>
+                </div>
+            </div>
+            
+            <p>Nous avons mis en place un processus structuré visant à garantir une analyse efficace et pertinente des données :</p>
+                
+                <ul>
+                    <li> <strong>Automatisation du traitement des données</strong> : importation, nettoyage et retraitement via VBA, Power Pivot et DAX, optimisant ainsi la fiabilité et l'efficacité des analyses.</li>
+                    <li> <strong>Exploration et visualisation des données</strong> : analyses descriptives des variables accompagnées de datavisualisation pour une interprétation intuitive.</li>
+                    <li> <strong>Conception de l'interface utilisateur</strong> : développement d'un design ergonomique facilitant l'interaction et l'exploitation des résultats.</li>
+                    <li> <strong>Élaboration d'indicateurs de performance</strong> : mise en place de métriques statistiques permettant d’évaluer l’occupation du centre hospitalier.</li>
+                    <li> <strong>Modélisation statistique avancée</strong> : étude de la relation entre les catégories professionnelles et les diagnostics pour une meilleure compréhension des tendances médicales.</li>
+            </ul>
+            
+            <div class="innovation-box">
+                <h3><i class="fas fa-lightbulb"></i> Innovation clé</h3>
+                <p>Développement d'un algorithme de détection automatique des anomalies dans les flux de patients, permettant d'identifier 48h à l'avance les pics d'activité</p>
+            </div>
+        </section>
+        <section id="Competences" class="rounded-block">
+    <h2>Impact & Résultats</h2>
+    
+    <div class="results-grid">
+        <div class="result-card">
+            <h4>Efficacité opérationnelle</h4>
+            <p>Réduction de 95% du temps de génération des rapports (de 8h à 20min/semaine)</p>
+        </div>
+        <div class="result-card">
+            <h4>Qualité des données</h4>
+            <p>Élimination de 100% des erreurs de saisie manuelle grâce à l'automatisation</p>
+        </div>
+        <div class="result-card">
+            <h4>Prise de décision</h4>
+            <p>Accès temps réel aux KPI pour 15+ décideurs de l'établissement</p>
+        </div>
+    </div>
+    
+    <div class="testimonial">
+        <blockquote>
+            "Cette solution a révolutionné notre suivi d'activité. Nous disposons maintenant d'indicateurs fiables en temps réel qui nous permettent d'optimiser nos ressources."
+        </blockquote>
+        <cite>— Direction EPSM J.M Charcot</cite>
+    </div>
+    
+    <h3>Compétences développées</h3>
+    <ul>
+        <li> Automatisation du traitement des données à des fins décisonnelles </li>
+        <li> Structuration et gestion de bases de données </li>
+        <li> Contextualisation des besoins métiers </li>
+        <li> Exploration et visualisation des données </li>
+        <li> Modélisation statistique </li>
+        <li> Développement d'outils interactifs</li>
+        <li> Collaboration et gestion de projet </li>
+        <li> Programmation VBA avancée</li>
+    </ul>
+</section>
+        
+        <section class="rounded-block"> 
+            <h3>Images du projet</h3>
+            <div class="image-slider">
+                <button class="prev" onclick="changeSlide(-1)">❮</button>
+                <div class="slides">
+                    <div class="slide">
+                        <img src="../Images/projet1_img2.png" alt="Image 1">
+                        <p>Menu principale</p>
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/projet1_img.png" alt="Image 2">
+                        <p>Suivi de l'activité globale</p>
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/projet1_img1.png" alt="Image 3">
+                        <p>Suivi de l'activité ambulatoire</p>
+                    </div>
+                     <div class="slide">
+                        <img src="../Images/projet_img4.png" alt="Image 3">
+                        <p>Suivi des hospitalisation</p>
+                    </div>
+                     <div class="slide">
+                        <img src="../Images/projet_img3.png" alt="Image 3">
+                        <p>Suivi des hospitalisation</p>
+                    </div>
+                </div>
+                <button class="next" onclick="changeSlide(1)">❯</button>
+            </div>
+        </section>
+         
+    </div>
+       <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">YD</span>
+                        <span class="logo-subtitle">Data Analyst</span>
+                    </div>
+                    <p>Architecte de solutions BI, IA & Automatisation</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="../index.html">Accueil</a></li>
+                            <li><a href="about.html">À propos</a></li>
+                            <li><a href="projet.html">Projets</a></li>
+                            <li><a href="competences.html">Compétences</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Contact</h4>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/yénam-dossou-a1a877292/" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/her0-00/My-portfolio" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="mailto:yenamdossou@gmail.com">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Yenam Dossou. Tous droits réservés.</p>
+                    <p class="footer-note">Certaines images non techniques ont été générées par IA.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../Scripts/scripts.js"></script>
+    <div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'fr', includedLanguages: 'fr,en'}, 'google_translate_element');
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

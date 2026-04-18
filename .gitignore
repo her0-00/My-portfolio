@@ -1,0 +1,46 @@
+# ===========================
+# Outils de développement
+# ===========================
+.amazonq/
+__pycache__/
+*.pyc
+*.pyo
+
+# ===========================
+# Scripts utilitaires (non destinés au repo public)
+# ===========================
+download_all_logos.py
+download_logos_simple.py
+download_logos.py
+download_missing_final.py
+download_missing.py
+download_remaining.py
+download_uvicorn.py
+fix_final.py
+fix_images.py
+project_manager.html
+README_PROJECT_GENERATOR.md
+PORTFOLIO_IMPROVEMENTS.md
+SKILL.md
+
+# ===========================
+# Fichiers temporaires / OS
+# ===========================
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.log
+
+# ===========================
+# Éditeurs
+# ===========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===========================
+# CV — fichier test
+# ===========================
+CV/test

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecruitIQ – Resume Intelligence Engine | Yenam Dossou | Next.js Python Groq LLM</title>
+    <meta name="description" content="RecruitIQ v4 par Yenam Dossou : outil IA d'audit et réécriture de CV pour contourner les ATS. Stack Next.js 15, Python, Groq Llama-3.3-70b, Playwright, ReportLab, Docker. Déployé sur Render.">
+    <meta name="keywords" content="RecruitIQ, Yenam Dossou, ATS, CV optimizer, Next.js, Python, Groq, LLM, Playwright, scraping emploi, WTTJ, HelloWork, Docker, portfolio data analyst">
+    <meta name="author" content="Yenam Dossou">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://her0-00.github.io/My-portfolio/Sites/projet5.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://her0-00.github.io/My-portfolio/Sites/projet5.html">
+    <meta property="og:title" content="RecruitIQ v4 – Resume Intelligence Engine | Yenam Dossou">
+    <meta property="og:description" content="Outil IA d'audit de CV, réécriture Groq LLM, scraping WTTJ/HelloWork et génération PDF 15 thèmes. Next.js 15 + Python + Docker.">
+    <meta property="og:image" content="https://her0-00.github.io/My-portfolio/Images/icon.png">
+    <link rel="stylesheet" href="../Styles/style_css.css">
+    <link rel="icon" type="image/png" href="../Images/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">YD</span>
+                <span class="logo-subtitle">Data Architect</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Accueil</a></li>
+                <li><a href="about.html" class="nav-link">À propos</a></li>
+                <li><a href="projet.html" class="nav-link active">Projets</a></li>
+                <li><a href="competences.html" class="nav-link">Compétences</a></li>
+                <li><a href="../CV/CV_Yenam_Dossou_v.pdf" class="nav-link cv-link" download><i class="fas fa-download"></i> CV</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="hero-section-p5">
+        <div class="hero-content-p5">
+            <div class="hero-badge" style="margin: 0 auto 1.25rem; display: inline-flex;">
+                <i class="fas fa-robot"></i>
+                <span>Next.js 15 · Python · Groq LLM · Playwright · Docker</span>
+            </div>
+            <h1>⬡ RecruitIQ <span style="font-size:1rem; font-weight:600; color:var(--success);">v4.0</span><br>
+                <span class="project-subtitle gradient-text">The Resume Intelligence Engine</span>
+            </h1>
+            <p style="color: var(--gray-600); margin-top: 1rem; font-size: 1rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+                75% des candidatures sont rejetées par des bots avant qu'un humain ne les lise.<br>
+                RecruitIQ audite, réécrit et exporte votre CV pour contourner les ATS et atterrir sur le bureau d'un recruteur.
+            </p>
+            <div style="margin-top: 1.75rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://riis.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fas fa-external-link-alt"></i> Essayer l'application</a>
+                <a href="https://github.com/her0-00/RIIS---Resume-Improve-Intelligence-Studio/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fab fa-github"></i> Voir sur GitHub</a>
+                <a href="projet.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Tous les projets</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="padding-top: 3rem; padding-bottom: 4rem;">
+
+        <!-- Métriques clés -->
+        <section class="rounded-block animate-on-scroll">
+            <h2>Contexte & Problématique</h2>
+            <p>Les systèmes ATS (Applicant Tracking Systems) comme Workday, Taleo ou iCIMS filtrent automatiquement les CV avant toute lecture humaine. Un CV mal structuré ou sans les bons mots-clés est éliminé en quelques secondes. RecruitIQ résout ce problème avec un pipeline IA complet : audit forensique, réécriture intelligente et génération de PDF optimisés ATS.</p>
+
+            <div class="project-metrics">
+                <div class="metric">
+                    <span class="metric-number">v4.0</span>
+                    <span class="metric-label">Version actuelle</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-number">15</span>
+                    <span class="metric-label">Thèmes PDF premium</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-number">&lt; 2s</span>
+                    <span class="metric-label">Analyse IA (Groq LPU)</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-number">2</span>
+                    <span class="metric-label">Sources scraping (WTTJ, HelloWork)</span>
+                </div>
+            </div>
+
+            <div class="challenge-box">
+                <h3><i class="fas fa-exclamation-triangle"></i> Défi principal</h3>
+                <p>Construire un système dual-agent (Auditeur + Architecte) capable d'analyser sémantiquement un CV, de le comparer à une offre d'emploi réelle scrapée en temps réel, et de générer un PDF pixel-perfect lisible par les ATS — le tout en moins de 30 secondes.</p>
+            </div>
+        </section>
+
+        <!-- Architecture technique -->
+        <section class="rounded-block animate-on-scroll">
+            <h2>Architecture Technique</h2>
+            <p>RecruitIQ fonctionne comme un pipeline dual-agent avec un frontend Next.js et un backend Python indépendant, communicant via des API routes.</p>
+
+            <div class="tech-stack">
+                <h3>Stack complète</h3>
+                <div class="tech-badges">
+                    <span class="tech-badge">Next.js 15</span>
+                    <span class="tech-badge">React 19</span>
+                    <span class="tech-badge">TypeScript</span>
+                    <span class="tech-badge">Python 3.11</span>
+                    <span class="tech-badge">Groq API (Llama-3.3-70b)</span>
+                    <span class="tech-badge">Playwright</span>
+                    <span class="tech-badge">ReportLab</span>
+                    <span class="tech-badge">pdfminer.six</span>
+                    <span class="tech-badge">Docker</span>
+                    <span class="tech-badge">Render</span>
+                </div>
+            </div>
+
+            <div class="p5-arch-grid" style="margin-top: 1.5rem;">
+                <div class="p5-arch-card">
+                    <div class="p5-arch-icon"><i class="fas fa-file-pdf"></i></div>
+                    <h4>Extracteur</h4>
+                    <p>Extraction texte PDF via <strong>pdfminer.six</strong> — parsing robuste des CV uploadés</p>
+                </div>
+                <div class="p5-arch-card">
+                    <div class="p5-arch-icon"><i class="fas fa-brain"></i></div>
+                    <h4>Auditeur IA</h4>
+                    <p>Analyse forensique via <strong>Groq (Llama-3.3-70b)</strong> — score 0-100, keywords manquants, profil psychologique</p>
+                </div>
+                <div class="p5-arch-card">
+                    <div class="p5-arch-icon"><i class="fas fa-spider"></i></div>
+                    <h4>Scraper</h4>
+                    <p><strong>Playwright headless</strong> — scraping WTTJ + HelloWork avec rate limiting et déduplication automatique</p>
+                </div>
+                <div class="p5-arch-card">
+                    <div class="p5-arch-icon"><i class="fas fa-file-export"></i></div>
+                    <h4>PDF Engine</h4>
+                    <p><strong>ReportLab</strong> — génération vectorielle pixel-perfect, 15 thèmes, 100% extractable par les ATS</p>
+                </div>
+            </div>
+
+            <!-- Pipeline visuel -->
+            <div class="riq-pipeline">
+                <div class="riq-pipeline-step">
+                    <div class="riq-pipeline-icon"><i class="fas fa-upload"></i></div>
+                    <span>Upload CV</span>
+                </div>
+                <div class="riq-pipeline-arrow"><i class="fas fa-chevron-right"></i></div>
+                <div class="riq-pipeline-step">
+                    <div class="riq-pipeline-icon"><i class="fas fa-search"></i></div>
+                    <span>Audit ATS</span>
+                </div>
+                <div class="riq-pipeline-arrow"><i class="fas fa-chevron-right"></i></div>
+                <div class="riq-pipeline-step">
+                    <div class="riq-pipeline-icon"><i class="fas fa-pen"></i></div>
+                    <span>Réécriture IA</span>
+                </div>
+                <div class="riq-pipeline-arrow"><i class="fas fa-chevron-right"></i></div>
+                <div class="riq-pipeline-step">
+                    <div class="riq-pipeline-icon"><i class="fas fa-file-pdf"></i></div>
+                    <span>Export PDF</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fonctionnalités -->
+        <section class="rounded-block animate-on-scroll">
+            <h2>Fonctionnalités Clés — v4.0</h2>
+
+            <div class="riq-features">
+
+                <div class="riq-feature-block">
+                    <div class="riq-feature-header">
+                        <div class="riq-feature-icon"><i class="fas fa-code-branch"></i></div>
+                        <h3>Workflow Dual-Path</h3>
+                    </div>
+                    <p>Après l'upload du CV, deux parcours au choix :</p>
+                    <ul class="timeline-list">
+                        <li><strong>« J'ai une offre »</strong> — coller la description, analyse immédiate CV vs offre, score ATS + keywords manquants, réécriture optimisée, export PDF</li>
+                        <li><strong>« Cherche des offres »</strong> — extraction automatique des keywords du CV par Groq, scraping intelligent WTTJ + HelloWork, scoring IA de pertinence (0-100) pour chaque offre, sélection → audit → réécriture → PDF</li>
+                    </ul>
+                </div>
+
+                <div class="riq-feature-block">
+                    <div class="riq-feature-header">
+                        <div class="riq-feature-icon"><i class="fas fa-microscope"></i></div>
+                        <h3>Audit Forensique ATS</h3>
+                    </div>
+                    <p>Analyse précise avec score 0-100, probabilité de passage et verdict marché :</p>
+                    <ul class="timeline-list">
+                        <li>Détection des keywords techniques et soft skills manquants</li>
+                        <li>Évaluation de la densité de contenu vs niveau de séniorité requis</li>
+                        <li>Analyse psychologique recruteur — le "Shadow Profile" présenté aux hiring managers</li>
+                        <li>Benchmarking de valeur marché et identification du "Salary Gap"</li>
+                    </ul>
+                </div>
+
+                <div class="riq-feature-block">
+                    <div class="riq-feature-header">
+                        <div class="riq-feature-icon"><i class="fas fa-magic"></i></div>
+                        <h3>Réécriture IA Intelligente</h3>
+                    </div>
+                    <p>Propulsé par <strong>Groq (Llama-3.3-70b)</strong> — analyse sub-seconde grâce au LPU :</p>
+                    <ul class="timeline-list">
+                        <li><strong>Boost Mode</strong> — enrichissement des expériences avec les accomplissements pertinents pour le poste</li>
+                        <li><strong>Dual Language</strong> — traduction et optimisation FR ↔ EN</li>
+                        <li><strong>Live Editor</strong> — cliquer sur n'importe quelle partie du PDF pour éditer directement</li>
+                        <li>Injection sémantique de keywords contextualisés à l'offre</li>
+                    </ul>
+                </div>
+
+                <div class="riq-feature-block">
+                    <div class="riq-feature-header">
+                        <div class="riq-feature-icon"><i class="fas fa-palette"></i></div>
+                        <h3>PDF Engine — 15 Thèmes Premium</h3>
+                    </div>
+                    <p>Les CV Canva/Design échouent les ATS car non lisibles par les machines. ReportLab dessine aux coordonnées exactes :</p>
+                    <ul class="timeline-list">
+                        <li>De "Tech Grid" (style dev épuré) à "Luxury Serif" (exécutif)</li>
+                        <li>Studio de personnalisation : couleurs d'accent, échelles de police, fonds</li>
+                        <li>100% text-extractable avec mapping Unicode correct</li>
+                        <li>Génération vectorielle — aucune image floue</li>
+                    </ul>
+                </div>
+
+                <div class="riq-feature-block">
+                    <div class="riq-feature-header">
+                        <div class="riq-feature-icon"><i class="fas fa-spider"></i></div>
+                        <h3>Job Scraping Intelligent</h3>
+                    </div>
+                    <p>Playwright headless pour les sites JS-rendered :</p>
+                    <ul class="timeline-list">
+                        <li>Timeouts intelligents : 15s/page, 30s total</li>
+                        <li>Rate limiting respectueux : 2s entre sites, max 10 offres/site</li>
+                        <li>Déduplication automatique des résultats</li>
+                        <li>Sources : WTTJ, HelloWork (architecture extensible)</li>
+                    </ul>
+                </div>
+
+                <div class="riq-feature-block">
+                    <div class="riq-feature-header">
+                        <div class="riq-feature-icon"><i class="fas fa-docker"></i></div>
+                        <h3>Déploiement Docker + Render</h3>
+                    </div>
+                    <p>Infrastructure de production complète :</p>
+                    <ul class="timeline-list">
+                        <li>Dockerfile multi-stage : Node 20 + Python 3.11 + Playwright Chromium</li>
+                        <li>render.yaml pour déploiement automatisé sur Render</li>
+                        <li>Zero data retention — traitement en mémoire uniquement</li>
+                        <li>Groq API key côté client (localStorage) — jamais loggée serveur</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Structure du code -->
+        <section class="rounded-block animate-on-scroll">
+            <h2>Structure du Projet</h2>
+            <div class="riq-code-grid">
+                <div class="riq-code-block">
+                    <div class="riq-code-header"><i class="fab fa-react"></i> Frontend — Next.js 15</div>
+                    <pre class="riq-code-pre">web/src/app/
+├── page.tsx              # UI + workflow logic
+├── OnboardingTour.tsx    # Visite guidée
+├── globals.css           # Styles responsive
+└── api/
+    ├── extract/          # Extraction PDF
+    ├── extract_keywords/ # Keywords IA
+    ├── search_jobs/      # Scraping Playwright
+    ├── analyze/          # Audit CV
+    └── generate_cv/      # Génération PDF</pre>
+                </div>
+                <div class="riq-code-block">
+                    <div class="riq-code-header"><i class="fab fa-python"></i> Backend — Python</div>
+                    <pre class="riq-code-pre">backend/
+├── extractor.py          # pdfminer.six
+├── pdf_cv.py             # ReportLab (72KB)
+├── worker.py             # Agents Groq
+├── scraper_cli.py        # CLI Playwright
+└── scraper_universal.py  # Scraping multi-sites</pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Résultats -->
+        <section class="rounded-block animate-on-scroll">
+            <h2>Performances & Résultats</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <h4>Vitesse d'analyse</h4>
+                    <p>Audit CV complet en <strong>5-10s</strong> grâce au LPU Groq — 10x plus rapide que GPT-4</p>
+                </div>
+                <div class="result-card">
+                    <h4>Scraping temps réel</h4>
+                    <p>15-25s pour scraper 2 sites d'emploi et scorer les offres par pertinence IA</p>
+                </div>
+                <div class="result-card">
+                    <h4>PDF ATS-proof</h4>
+                    <p>100% des PDFs générés sont extractables par les ATS — zéro rejet pour raison technique</p>
+                </div>
+                <div class="result-card">
+                    <h4>Architecture scalable</h4>
+                    <p>Containerisé Docker, déployable sur Render, Fly.io ou tout cloud — roadmap v5 avec auth utilisateur</p>
+                </div>
+            </div>
+
+            <div class="innovation-box" style="margin-top: 2rem;">
+                <h3><i class="fas fa-lightbulb"></i> Ce qui rend ce projet unique</h3>
+                <p>La combinaison d'un LLM ultra-rapide (Groq LPU), d'un scraper headless en temps réel et d'un moteur PDF vectoriel dans une seule application web — sans base de données, sans stockage de données utilisateur, déployable en un clic.</p>
+            </div>
+
+            <div style="margin-top: 2rem; text-align: center; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+                <a href="https://riis.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 1.05rem; padding: 0.9rem 2rem;">
+                    <i class="fas fa-external-link-alt"></i> Essayer l'application live
+                </a>
+                <a href="https://github.com/her0-00/RIIS---Resume-Improve-Intelligence-Studio/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size: 1.05rem; padding: 0.9rem 2rem;">
+                    <i class="fab fa-github"></i> Code source GitHub
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">YD</span>
+                        <span class="logo-subtitle">Data Architect</span>
+                    </div>
+                    <p>Architecte de solutions BI, IA & Automatisation</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="../index.html">Accueil</a></li>
+                            <li><a href="about.html">À propos</a></li>
+                            <li><a href="projet.html">Projets</a></li>
+                            <li><a href="competences.html">Compétences</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Projets</h4>
+                        <ul>
+                            <li><a href="projet1.html">Dashboard EPSM</a></li>
+                            <li><a href="projet2.html">Analyse R Shiny</a></li>
+                            <li><a href="projet3.html">Data Mining</a></li>
+                            <li><a href="projet4.html">Monito-Teams</a></li>
+                            <li><a href="projet5.html">RecruitIQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Contact</h4>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/y%C3%A9nam-dossou-a1a877292/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/her0-00" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                            <a href="mailto:yenamdossou@gmail.com"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Yenam Dossou. Tous droits réservés.</p>
+                    <p class="footer-note">Certaines images non techniques ont été générées par IA.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'fr', includedLanguages: 'fr,en'}, 'google_translate_element');
+    }
+    </script>
+    <script src="../Scripts/scripts.js"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

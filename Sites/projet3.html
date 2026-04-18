@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Mining Alertes MSP – Yenam Dossou | Power Automate Safran Aircraft Engines</title>
+    <meta name="description" content="Projet de Yenam Dossou chez Safran Aircraft Engines : automatisation du suivi des alertes MSP via Power Automate, Microsoft Teams et Planner. Réduction de 75% du temps de traitement.">
+    <meta name="keywords" content="Yenam Dossou, data mining, alertes MSP, Power Automate, Microsoft Teams, Safran Aircraft Engines, automatisation, Manufacturing 4.0, BUT SD, IUT Vannes">
+    <meta name="author" content="Yenam Dossou">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://her0-00.github.io/My-portfolio/Sites/projet3.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://her0-00.github.io/My-portfolio/Sites/projet3.html">
+    <meta property="og:title" content="Data Mining Alertes MSP – Yenam Dossou | Safran">
+    <meta property="og:description" content="Automatisation du suivi des alertes MSP chez Safran Aircraft Engines. Power Automate, Teams, Planner. -75% temps de traitement.">
+    <meta property="og:image" content="https://her0-00.github.io/My-portfolio/Images/alert.png">
+    <link rel="stylesheet" href="../Styles/style_css.css">
+    <link rel="icon" type="image/png" href="../Images/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="../Scripts/scripts.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">YD</span>
+                <span class="logo-subtitle">Data Analyst</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Accueil</a></li>
+                <li><a href="about.html" class="nav-link">À propos</a></li>
+                <li><a href="projet.html" class="nav-link active">Projets</a></li>
+                <li><a href="competences.html" class="nav-link">Compétences</a></li>
+                <li><a href="../CV/CV_Yenam_Dossou_v.pdf" class="nav-link cv-link" download><i class="fas fa-download"></i> CV</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="hero-section-p3">
+        <div class="hero-content-p3">
+            <h1><i class="fas fa-robot"></i> Automatisation IA<br><span class="project-subtitle">Suivi des Alertes MSP</span></h1>
+        </div>
+    </div>
+    <div class="container">
+    <!-- Icône flottante pour la table des matières -->
+    <div class="toc-icon">
+        <i class="fas fa-bars"></i>
+    </div>
+    
+    <!-- Table des matières flottante -->
+    <div class="toc">
+        <a href="#Introduction">Introduction</a>
+        <a href="#Projetabout">Lancement du projet</a>
+        <a href="#Developpement">Développement de la solution</a>
+        <a href="#PowerAutomate">Fonctionnement du flux Power Automate</a>
+        <a href="#Deployment">Déploiement et accompagnement</a>
+        <a href="#Impact">Impact et contribution</a>
+        <a href="#CompetencesDeveloppees">Compétences développées</a>
+    </div>
+</div>
+
+    <div class="container">
+        <section id="Introduction" class="rounded-block">
+            <h2>Introduction</h2>
+            <div class="project-metrics">
+                <div class="metric">
+                    <span class="metric-number">100%</span>
+                    <span class="metric-label">Automatisation</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-number">0</span>
+                    <span class="metric-label">Erreur humaine</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-number">24/7</span>
+                    <span class="metric-label">Surveillance</span>
+                </div>
+            </div>
+            <p>La Maitrise Statistique des Procédés (MSP) est un levier essentiel dans un environnement de production en série, permettant de détecter précocement les dérives de fabrication et de corriger rapidement les écarts avant qu'ils ne génèrent des pièces non conformes en grande quantité.</p>
+            
+            <div class="challenge-box">
+                <h3><i class="fas fa-exclamation-triangle"></i> Défi industriel</h3>
+                <p>Automatiser complètement le processus de traitement des alertes MSP pour éliminer les erreurs humaines et accélérer la réactivité</p>
+            </div>
+        </section>
+
+        <section id="Projetabout" class="rounded-block">
+            <h2>Objectifs et exigences</h2>
+            <p> Afin d'assurer le suivi du traitement des alertes automatiques générées par le système de détection de déviations, une solution numérique a été développée pour :</p>
+            <ul>
+                <li>Collecter automatiquement les mails d’alerte.</li>
+                <li>Créer des tâches associées dans Teams.</li>
+                <li>Centraliser les alertes accessibles à toute l’équipe.</li>
+                <li>Assurer un suivi rigoureux du traitement des alertes.</li>
+            </ul>
+        </section>
+
+        <section id="Developpement" class="rounded-block">
+            <h2>Développement de la Solution</h2>
+            <p>La solution repose sur la transformation des mails d’alerte en tâches dans Teams via un script VBA développé par l’ingénieur coordinateur de déploiement numérique. Une fois dans Teams, le mail est converti en tâche dans le Planner grâce à un flux </strong>Power Automate</strong> conçu pour :</p>
+            <ul>
+                <li>Récupérer et extraire les informations pertinentes du mail.</li>
+                <li>Assigner automatiquement une tâche avec les bonnes caractéristiques.</li>
+                <li>Faciliter la gestion et le suivi des alertes.</li>
+            </ul>
+        </section>
+
+        <section id="PowerAutomate" class="rounded-block">
+            <h2>Fonctionnement du Flux Power Automate</h2>
+            <p><strong>Power Automate </strong>permet d’extraire, transformer et gérer les données au sein de l’écosystème Microsoft. En utilisant ses connecteurs, le flux Power interagit avec Outlook, SharePoint, Teams et Power BI pour une automatisation efficace.</p>
+            <p>Exemple du contenu d'un composant qui récupère une partie de la description de l’alerte :</p>
+            <div style="text-align: center;">
+            <img  src="../Images/power_code.png" alt="Code Power Automate" width="800" style =" center">
+            </div>
+        </section>
+
+        <section id="Deployment" class="rounded-block">
+            <h2>Déploiement et Accompagnement</h2>
+            <p>La solution a été mise à disposition du Bureau des Méthodes avec un <strong>guide d’installation</strong> et des <strong>ateliers de formation</strong> pour garantir une adoption fluide.</p>
+        </section>
+
+        <section id="Impact" class="rounded-block">
+            <h2>Impact et Contribution</h2>
+            
+            <div class="results-grid">
+                <div class="result-card">
+                    <h4>Efficacité opérationnelle</h4>
+                    <p>Élimination de 100% des ressaisies manuelles d'alertes</p>
+                </div>
+                <div class="result-card">
+                    <h4>Traçabilité</h4>
+                    <p>Historique complet et automatique de toutes les actions menées</p>
+                </div>
+                <div class="result-card">
+                    <h4>Réactivité</h4>
+                    <p>Réduction du temps de traitement des alertes de 75%</p>
+                </div>
+            </div>
+            
+            <p>Grâce à cette solution, les équipes peuvent :</p>
+            <ul>
+                <li>Éviter toute ressaisie manuelle des alertes.</li>
+                <li>Faciliter l’animation du traitement des alertes.</li>
+                <li>Assurer un suivi efficace avec un historique clair des actions menées.</li>
+            </ul>
+        </section>
+
+        <section id="CompetencesDeveloppees" class="rounded-block">
+    <h2>Compétences développées</h2>
+
+    <h3>Compétences Méthodologiques</h3>
+    <ul>
+        <li><strong>Analyse fonctionnelle</strong> : Capacité à comprendre et formaliser un besoin métier en le traduisant en une solution technique.</li>
+        <li><strong>Approche orientée utilisateur</strong> : Intégration des contraintes et attentes des utilisateurs finaux dès la conception.</li>
+        <li><strong>Gestion de projet agile</strong> : Structuration du travail en itérations, avec tests, retours et améliorations continues.</li>
+        <li><strong>Documentation et traçabilité</strong> : Rédaction de documents techniques et fonctionnels pour assurer une utilisation et une maintenance efficaces.</li>
+    </ul>
+
+    <h3>Compétences Techniques</h3>
+    <ul>
+        <li><strong>Power Automate</strong> : Conception et structuration de flux automatisés pour répondre à des problématiques métier.</li>
+        <li><strong>Microsoft Graph</strong> : Utilisation et requêtage d’API Microsoft pour récupérer et exploiter des données.</li>
+        <li><strong>Microsoft Teams & Planner</strong> : Développement de solutions interactives pour la gestion et le suivi des alertes.</li>
+    </ul>
+
+    <h3>Compétences Professionnelles</h3>
+    <ul>
+        <li><strong>Travail en équipe</strong> : Collaboration avec des profils variés et intégration dans une dynamique collective.</li>
+        <li><strong>Gestion des imprévus</strong> : Adaptation aux aléas techniques et organisationnels en ajustant la solution selon les contraintes rencontrées.</li>
+    </ul>
+</section>
+
+
+        <section class="rounded-block">
+            <h3>Illustrations du Projet</h3>
+            <div class="image-slider">
+                <button class="prev" onclick="changeSlide(-1)">❮</button>
+                <div class="slides">
+                    <div class="slide">
+                        <img src="../Images/ancienne_methode.png" alt="Ancienne méthode de gestion" width="1à0">
+                        <p>Ancienne structure de traitement des alertes</p>
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/nouvelle_methode.png" alt="Nouvelle méthode de gestion">
+                        <p>Nouvelle structure du traitement des alertes</p>
+                    </div>
+                    <div class="slide">
+                        <img src="../Images/planner_teams.png" alt="Planner Teams">
+                        <p>Suivi des alertes via Planner Teams</p>
+                    </div>
+                </div>
+                <button class="next" onclick="changeSlide(1)">❯</button>
+            </div>
+        </section>
+
+       
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">YD</span>
+                        <span class="logo-subtitle">Data Analyst</span>
+                    </div>
+                    <p>Architecte de solutions BI, IA & Automatisation</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="../index.html">Accueil</a></li>
+                            <li><a href="about.html">À propos</a></li>
+                            <li><a href="projet.html">Projets</a></li>
+                            <li><a href="competences.html">Compétences</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Contact</h4>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/yénam-dossou-a1a877292/" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/her0-00/My-portfolio" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="mailto:yenamdossou@gmail.com">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Yenam Dossou. Tous droits réservés.</p>
+                    <p class="footer-note">Certaines images non techniques ont été générées par IA.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="../Scripts/scripts.js"></script>
+    <div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'fr', includedLanguages: 'fr,en'}, 'google_translate_element');
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

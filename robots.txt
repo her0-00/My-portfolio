@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://her0-00.github.io/My-portfolio/sitemap.xml

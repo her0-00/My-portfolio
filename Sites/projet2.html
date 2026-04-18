@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse Multivariée R Shiny – Yenam Dossou | Criminalité USA Data Science</title>
+    <meta name="description" content="Projet de Yenam Dossou : application R Shiny d'analyse multivariée des données de criminalité aux USA. ACP, clustering, cartes choroplèthes, ggplot2, plotly, leaflet. BUT Science des Données IUT Vannes.">
+    <meta name="keywords" content="Yenam Dossou, R Shiny, analyse multivariée, criminalité USA, ACP, clustering, ggplot2, plotly, data science, BUT SD, IUT Vannes">
+    <meta name="author" content="Yenam Dossou">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://her0-00.github.io/My-portfolio/Sites/projet2.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://her0-00.github.io/My-portfolio/Sites/projet2.html">
+    <meta property="og:title" content="Analyse Multivariée R Shiny – Yenam Dossou">
+    <meta property="og:description" content="Application R Shiny interactive d'analyse de la criminalité aux USA. ACP, clustering, visualisations dynamiques.">
+    <meta property="og:image" content="https://her0-00.github.io/My-portfolio/Images/image_rshiny..png">
+    <link rel="stylesheet" href="../Styles/style_css.css">
+    <link rel="icon" type="image/png" href="../Images/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="../Scripts/scripts.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">YD</span>
+                <span class="logo-subtitle">Data Analyst</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Accueil</a></li>
+                <li><a href="about.html" class="nav-link">À propos</a></li>
+                <li><a href="projet.html" class="nav-link active">Projets</a></li>
+                <li><a href="competences.html" class="nav-link">Compétences</a></li>
+                <li><a href="../CV/CV_Yenam_Dossou_v.pdf" class="nav-link cv-link" download><i class="fas fa-download"></i> CV</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-section-p2">
+        <div class="hero-content-p1">
+            <h1><i class="fas fa-chart-area"></i> Analyse Multivariée Interactive<br><span class="project-subtitle">Application R Shiny - Criminalité USA</span></h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Icône flottante pour la table des matières -->
+        <div class="toc-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <!-- Table des matières flottante -->
+        <div class="toc">
+            <a href="#Projetabout">Description du projet</a>
+            <a href="#Data">Analyse des données et datavisualisation</a>
+             <a href="#compétence">Compétences acquises</a>
+            <a href="#Dataanalysis">Application R Shiny</a>
+        </div>
+
+        <section id="Projetabout" class="rounded-block">
+            <h2>Description du projet</h2>
+            <div class="project-metrics">
+                <div class="metric">
+                    <span class="metric-number">50</span>
+                    <span class="metric-label">États analysés</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-number">7</span>
+                    <span class="metric-label">Types de crimes</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-number">100%</span>
+                    <span class="metric-label">Interactif</span>
+                </div>
+            </div>
+            <p>Ce projet explore les taux de criminalité aux États-Unis à partir des données publiques fournies par le ministère de la Justice et le FBI.</p>
+
+            <div class="challenge-box">
+                <h3><i class="fas fa-exclamation-triangle"></i> Défi technique</h3>
+                <p>Créer une application web interactive permettant l'exploration intuitive de millions de données criminelles avec analyses multivariées en temps réel</p>
+            </div>
+
+            <p>Les données couvrent les 50 États et se répartissent en deux grandes catégories :</p>
+            <ul>
+                <li>  <strong>Crimes contre les biens :</strong> cambriolages, larcins et délits automobiles.</li>
+                <li> <strong>Crimes violents :</strong> agressions, meurtres, viols et vols qualifiés.</li>
+            </ul>
+            <p>Notre objectif était de concevoir une <strong>application R Shiny</strong> permettant une exploration intuitive et interactive de ces données.</p>
+        </section>
+
+        <section id="Data" class="rounded-block">
+            <h2>Architecture technique & Fonctionnalités</h2>
+            
+            <div class="tech-stack">
+                <h3>Stack technique</h3>
+                <div class="tech-badges">
+                    <span class="tech-badge">R</span>
+                    <span class="tech-badge">Shiny</span>
+                    <span class="tech-badge">ggplot2</span>
+                    <span class="tech-badge">plotly</span>
+                    <span class="tech-badge">leaflet</span>
+                    <span class="tech-badge">DT</span>
+                </div>
+            </div>
+            
+            <h3>Points clés</h3>
+            <ul>
+                <li>  <strong>Importation et nettoyage des données :</strong> automatisation du traitement des données brutes.</li>
+                <li> <strong>Visualisation dynamique :</strong> graphiques interactifs et cartes choroplèthes pour comparer les États.</li>
+                <li> <strong>Filtres avancés :</strong> exploration des crimes par type, localisation et variables socio-économiques.</li>
+                <li> <strong>Modélisation statistique :</strong> analyse des corrélations entre criminalité et facteurs économiques.</li>
+                <li> <strong>Analyse multivariée :</strong> ACP et AFC pour identifier les caractéristiques clés et leurs relations.</li>
+                <li> <strong>Interface intuitive :</strong> tableau de bord ergonomique facilitant l'analyse.</li>
+            </ul>
+            
+            <div class="innovation-box">
+                <h3><i class="fas fa-lightbulb"></i> Innovation clé</h3>
+                <p>Implémentation d'algorithmes de clustering dynamique permettant de regrouper automatiquement les États selon leurs profils criminologiques</p>
+            </div>
+        </section>
+     <section id="compétence" class="rounded-block">   
+ <h2>Impact & Résultats</h2>
+ 
+    <div class="results-grid">
+        <div class="result-card">
+            <h4>Accessibilité des données</h4>
+            <p>Transformation de données complexes en interface intuitive accessible à tous</p>
+        </div>
+        <div class="result-card">
+            <h4>Performance</h4>
+            <p>Traitement interactif de millions de points de données en temps réel</p>
+        </div>
+        <div class="result-card">
+            <h4>Adoption</h4>
+            <p>Application déployée publiquement et utilisée pour la recherche académique</p>
+        </div>
+    </div>
+    
+    <h3>Compétences développées</h3>
+    <ul>
+        <li> Automatisation du traitement des données à des fins décisonnelles </li>
+        <li> Structuration et gestion de bases de données </li>
+        <li> Exploration et visualisation des données </li>
+        <li> Modélisation statistique </li>
+        <li> Développement d'outils interactifs</li>
+        <li> Collaboration et gestion de projet </li>
+    </ul>
+</section>
+        <section id="Dataanalysis" class="rounded-block">
+            <h2>Application R Shiny</h2>
+            <p>Découvrez l'application interactive permettant d'explorer les tendances de la criminalité aux États-Unis :</p>
+            <div class="centered">
+            <a href="https://ydossou.shinyapps.io/CrimeUSA/" target="_blank">
+                <div style="text-align: center;">
+                <img src="../Images/image_rshiny..png" alt="Aperçu de l'application CrimeUSA" width ="600">
+                
+            </a>
+            </div>
+            <p><a href="https://ydossou.shinyapps.io/CrimeUSA/" target="_blank">Accéder à l'application CrimeUSA</a></p>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">YD</span>
+                        <span class="logo-subtitle">Data Analyst</span>
+                    </div>
+                    <p>Architecte de solutions BI, IA & Automatisation</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="../index.html">Accueil</a></li>
+                            <li><a href="about.html">À propos</a></li>
+                            <li><a href="projet.html">Projets</a></li>
+                            <li><a href="competences.html">Compétences</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Contact</h4>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/yénam-dossou-a1a877292/" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/her0-00/My-portfolio" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="mailto:yenamdossou@gmail.com">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Yenam Dossou. Tous droits réservés.</p>
+                    <p class="footer-note">Certaines images non techniques ont été générées par IA.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="../Scripts/scripts.js"></script>
+    <div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'fr', includedLanguages: 'fr,en'}, 'google_translate_element');
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

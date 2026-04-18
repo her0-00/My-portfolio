@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monito-Teams – Yenam Dossou | Surveillance Audio Python Windows Microsoft Teams</title>
+    <meta name="description" content="Projet de Yenam Dossou : Monito-Teams, utilitaire Windows de surveillance audio en temps réel avec intégration Microsoft Teams. Python, PyAudio, Tkinter, PyInstaller. Zéro maintenance.">
+    <meta name="keywords" content="Yenam Dossou, Monito-Teams, surveillance audio, Python, PyAudio, Microsoft Teams, Windows, automatisation, BUT SD, IUT Vannes">
+    <meta name="author" content="Yenam Dossou">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://her0-00.github.io/My-portfolio/Sites/projet4.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://her0-00.github.io/My-portfolio/Sites/projet4.html">
+    <meta property="og:title" content="Monito-Teams – Yenam Dossou | Surveillance Audio">
+    <meta property="og:description" content="Utilitaire Windows de surveillance audio en temps réel avec intégration Microsoft Teams. Python, PyAudio, Tkinter.">
+    <meta property="og:image" content="https://her0-00.github.io/My-portfolio/Images/mt.png">
+    <link rel="stylesheet" href="../Styles/style_css.css">
+    <link rel="icon" type="image/png" href="../Images/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="../Scripts/scripts.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">YD</span>
+                <span class="logo-subtitle">Data Analyst</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Accueil</a></li>
+                <li><a href="about.html" class="nav-link">À propos</a></li>
+                <li><a href="projet.html" class="nav-link active">Projets</a></li>
+                <li><a href="competences.html" class="nav-link">Compétences</a></li>
+                <li><a href="../CV/CV_Yenam_Dossou_v.pdf" class="nav-link cv-link" download><i class="fas fa-download"></i> CV</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-section-p4">
+        <div class="hero-content-p4">
+            <h1><i class="fas fa-microphone"></i> Monito-Teams<br><span class="project-subtitle">Surveillance Audio Intelligente</span></h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="toc-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="toc">
+            <a href="#Introduction">Introduction</a>
+            <a href="#Objectifs">Objectifs et fonctionnalités</a>
+            <a href="#Developpement">Développement de la solution</a>
+            <a href="#Utilisation">Utilisation de l'exécutable</a>
+            <a href="#Technique">Spécifications techniques</a>
+            <a href="#Impact">Impact et contribution</a>
+            <a href="#Competences">Compétences développées</a>
+        </div>
+    </div>
+
+    <div class="container">
+     <section id="Introduction" class="rounded-block">
+  <h2>Introduction</h2>
+  <p>
+    <strong>Monito-Teams</strong> est un utilitaire Windows développé pour surveiller en temps réel le niveau sonore capté par le microphone. Il permet d’alerter l’utilisateur en cas de dépassement de seuils sonores, selon des profils adaptés à différents environnements professionnels tels que le télétravail, les open spaces ou les ateliers.
+  </p>
+  <p>
+    Dans un contexte où les réunions virtuelles sont devenues la norme, notamment via <strong>Microsoft Teams</strong>, il est fréquent que les utilisateurs parlent trop fort sans s’en rendre compte, perturbant ainsi la qualité sonore des échanges. Ce phénomène peut nuire à la concentration, générer des tensions ou simplement créer un inconfort auditif pour les interlocuteurs.
+  </p>
+  <p>
+    Le besoin identifié est donc de disposer d’un outil capable de :
+    <ul>
+      <li>Surveiller en continu le niveau sonore de la voix.</li>
+      <li>Prévenir l’utilisateur en cas de dépassement de seuils définis.</li>
+      <li>Adapter les seuils selon le contexte professionnel et le type de micro utilisé.</li>
+      <li>Fonctionner de manière autonome sans installation complexe.</li>
+    </ul>
+    <p>
+      <strong>Monito-Teams</strong> répond à ce besoin en offrant une solution simple, efficace et intégrée à l’environnement Microsoft, garantissant ainsi une meilleure qualité de communication et un confort acoustique optimal.
+    </p>
+  </p>
+</section>
+
+        <section id="Objectifs" class="rounded-block">
+            <h2>Objectifs et fonctionnalités</h2>
+            <ul>
+                <li>Surveiller en continu le niveau sonore de la voix</li>
+                <li>Déclencher des alertes visuelles et sonores en cas de dépassement</li>
+                <li>Proposer des profils adaptés : télétravail, open space, atelier, etc</li>
+                <li>Calibrer automatiquement les seuils selon le micro et la voix</li>
+                <li>Gestion des erreurs systèmes, fermeture et lancement automatiquement de l’application en cas de fermeture</li>
+            </ul>
+        </section>
+
+        <section id="Developpement" class="rounded-block">
+            <h2>Développement de la solution</h2>
+            
+            <div class="tech-stack">
+                <h3>Stack technique</h3>
+                <div class="tech-badges">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">PyAudio</span>
+                    <span class="tech-badge">Tkinter</span>
+                    <span class="tech-badge">Threading</span>
+                    <span class="tech-badge">Windows API</span>
+                    <span class="tech-badge">PyInstaller</span>
+                </div>
+            </div>
+            
+            <p>Le projet repose sur une architecture en deux parties :</p>
+            <ul>
+                <li><strong>monito_teams.exe</strong> : application principale de surveillance audio</li>
+                <li><strong>monito_teams_launcher.exe</strong> : lanceur qui surveille et relance l’application si nécessaire</li>
+            </ul>
+            <p>Le système est entièrement autonome et ne nécessite aucune installation de Python ou de dépendances</p>
+        </section>
+
+        <section id="Utilisation" class="rounded-block">
+            <h2>Utilisation</h2>
+            <ol>
+                <li>Lancer <strong>Monito-Teams (Launcher)</strong></li>
+                <li>Sélectionner le microphone</li>
+                <li>Calibrer votre micro</li>
+                <li>Choisir le profil et le mode d’alerte</li>
+                <li>Fermer la fenêtre pour arrêter la surveillance</li>
+            </ol>
+        </section>
+
+
+        <section id="Technique" class="rounded-block">
+            <h2>Spécifications techniques</h2>
+            <ul>
+                <li>Lancement automatique lors du démarrage d'un <strong>appel Teams</strong></li>
+                <li>Relance automatique en cas d’erreur ou de fermeture</li>
+                <li>Journalisation complète des événements </li>
+                <li>Compatible uniquement avec Windows</li>
+                <li>Aucune collecte des données</li>
+            </ul>
+        </section>
+
+        <section id="Impact" class="rounded-block">
+            <h2>Impact et contribution</h2>
+            
+            <div class="results-grid">
+                <div class="result-card">
+                    <h4>Confort acoustique</h4>
+                    <p>Amélioration significative de la qualité des réunions virtuelles</p>
+                </div>
+                <div class="result-card">
+                    <h4>Adoption</h4>
+                    <p>Solution déployée et utilisée quotidiennement par les équipes</p>
+                </div>
+                <div class="result-card">
+                    <h4>Autonomie</h4>
+                    <p>Zéro maintenance requise grâce à l'architecture autonome</p>
+                </div>
+            </div>
+            
+            <ul>
+                <li>Amélioration du confort vocal en environnement professionnel</li>
+                <li>Réduction des nuisances sonores involontaires</li>
+                <li>Autonomie complète sans dépendances externes</li>
+            </ul>
+        </section>
+
+        <section id="Competences" class="rounded-block">
+            <h2>Compétences développées</h2>
+            <h3>Compétences Techniques</h3>
+            <ul>
+                <li>Développement d’applications Windows autonomes</li>
+                <li>Traitement du signal sonore </li>
+                <li>Surveillance de processus et gestion d’erreurs</li>
+                <li>Journalisation et configuration dynamique</li>
+            </ul>
+            <h3>Compétences Professionnelles</h3>
+            <ul>
+                <li>Conception orientée utilisateur</li>
+                <li>Documentation technique claire et structurée</li>
+                <li>Autonomie dans le développement et le déploiement</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">YD</span>
+                        <span class="logo-subtitle">Data Analyst</span>
+                    </div>
+                    <p>Architecte de solutions BI, IA & Automatisation</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="../index.html">Accueil</a></li>
+                            <li><a href="about.html">À propos</a></li>
+                            <li><a href="projet.html">Projets</a></li>
+                            <li><a href="competences.html">Compétences</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Contact</h4>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/yénam-dossou-a1a877292/" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/her0-00/My-portfolio" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="mailto:yenamdossou@gmail.com">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Yenam Dossou. Tous droits réservés.</p>
+                    <p class="footer-note">Certaines images non techniques ont été générées par IA.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../Scripts/scripts.js"></script>
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'fr', includedLanguages: 'fr,en'}, 'google_translate_element');
+        }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
