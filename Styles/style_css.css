@@ -2443,7 +2443,7 @@ video {
     margin-bottom: 0.5rem;
 }
 
-/* --- Architecture RecruitIQ --- */
+/* --- Architecture RIIS --- */
 .p5-arch-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -2486,11 +2486,11 @@ video {
     line-height: 1.5;
 }
 
-/* --- RecruitIQ placeholder dans hero index --- */
-.proj-recruitiq-img {
+/* --- RIIS placeholder dans hero index --- */
+.proj-RIIS-img {
     background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%);
 }
-.proj-recruitiq-placeholder {
+.proj-RIIS-placeholder {
     width: 100%;
     height: 100%;
     display: flex;
@@ -2500,10 +2500,10 @@ video {
     gap: 0.75rem;
     color: rgba(255,255,255,0.9);
 }
-.proj-recruitiq-placeholder i {
+.proj-RIIS-placeholder i {
     font-size: 3.5rem;
 }
-.proj-recruitiq-placeholder span {
+.proj-RIIS-placeholder span {
     font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -2578,7 +2578,7 @@ video {
 }
 
 /* ============================================
-   RECRUITIQ PAGE — COMPOSANTS SPÉCIFIQUES
+   RIIS PAGE — COMPOSANTS SPÉCIFIQUES
    ============================================ */
 
 /* Pipeline visuel */
@@ -2703,8 +2703,8 @@ video {
     white-space: pre;
 }
 
-/* Mise à jour carte RecruitIQ dans projet.html */
-.proj-card-badge--recruitiq {
+/* Mise à jour carte RIIS dans projet.html */
+.proj-card-badge--RIIS {
     background: linear-gradient(135deg, var(--accent), var(--primary));
 }
 
